@@ -10,8 +10,11 @@
 
 let kilomitres = prompt("Chilometri vuoi percorrere?");
 
+console.log("kilomitres");
 
-let age = prompt("quanti?");
+let age = prompt("quanti anni hai?");
+
+console.log("age")
 
 let price = 0.21 * kilomitres ;
 
@@ -25,7 +28,7 @@ let priceOver = (price - ((price * 40) / 100));
 
 if (age < 18){
     document.getElementById("prezzo").innerHTML = `Il prezzo è "${priceUnder}" `
-} else if (age < 63){
+} else if (age < 65){
     document.getElementById("prezzo").innerHTML = `Il prezzo è "${price}" `
 } else {
     document.getElementById("prezzo").innerHTML = `Il prezzo è "${priceOver}" `
