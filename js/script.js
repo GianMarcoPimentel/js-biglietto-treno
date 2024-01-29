@@ -18,6 +18,8 @@ console.log("age")
 
 let price = 0.21 * kilomitres ;
 
+/* price = Math.round((price * 100 ) / 100 ).toFixed(2); */
+
 let priceUnder = (price - ((price * 20) / 100));
 
 let priceOver = (price - ((price * 40) / 100));
