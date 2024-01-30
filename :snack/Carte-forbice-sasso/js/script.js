@@ -1,5 +1,5 @@
 const sceltaUtente = prompt("Scegli Carta Forbice Sasso");
-console.log("sceltaUtente" ,sceltaUtente)
+/* console.log("sceltaUtente" ,sceltaUtente) */
 
 //facciamo scegliere ranndomicamente al computer
 //possimo avere una variabile che sia uguale a un numro intero per la scelta random dove:
@@ -19,7 +19,7 @@ if(sceltaComputer == 1) {
 } else {
     conversioneComputer = "sasso";
 }
-console.log("sceltaComputer" , sceltaComputer)
+/* console.log("sceltaComputer" , sceltaComputer) */
 
 if(sceltaUtente == sceltaComputer){
     document.getElementById("risultato").innerHTML = `Avete pareggiato!`
