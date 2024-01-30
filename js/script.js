@@ -22,19 +22,28 @@
 kilomitres = Number(kilomitres); */
 const kilometres = Number(prompt("quanti chilometri vuoi fare?"));
 /* console.log("kilomitres"); */
+
+
+let errorHappened = false;
+
 if(isNaN(kilometres) || kilometres < 1){
     alert("Hai inserito un numero errato,ricarica la pagina e inserisci un valore corretto");
+    errorHappened = true;
 }
 /* let age = prompt("quanti anni hai?");
 age = Number(age); */
-
-// si può scrivere direttamente su una riga sola:
-
-const age = Number ( prompt("Quanti anni hai?") );
-/* console.log("age") */
-if(isNaN(age) || age < 0 || age > 122){
-    alert("Hai inserito un numero errato,ricarica la pagina e inserisci un valore corretto");
+let age;
+// se non è successo nessun errore precedentemente chiedo l'età
+if( ! errorHappened){
+    age = Number ( prompt("Quanti anni hai?") );
+    /* console.log("age") */
+    if(isNaN(age) || age < 0 || age > 122 ){
+        alert("Hai inserito un numero errato,ricarica la pagina e inserisci un valore corretto");
+        errorHappened = true;
+    }
 }
+
+
 let price = 0.21 * kilometres;
 
 
@@ -59,5 +68,8 @@ if (age < 18){
     finalPrice = price - price * 0.4
 /*     document.getElementById("prezzo").innerHTML = `Il prezzo è "${finalPrice}" `*/
 }
-
-document.getElementById("prezzo").innerHTML = `Il prezzo è ${finalPrice.toFixed(2)} <br> ${discountMessage}`
+if( ! errorHappened){
+    document.getElementById("prezzo").innerHTML = `Il prezzo è ${finalPrice.toFixed(2)} <br> ${discountMessage}`;
+}
+// se errorH è vero -> non è successo allora diventa false e mi fa entrare nell'if
+// se errorH è false->  è successo allora diventa veo e non posso entrare nell'if
